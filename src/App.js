@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ProfileCard from "./components/ProfileCard";
+const people = [
+  { firstName: "Jane", lastName: "Doe", age: 45, hairColor: "Black" },
+  { firstName: "John", lastName: "Smith", age: 88, hairColor: "White" },
+  { firstName: "Millard", lastName: "Fillmore", age: 50, hairColor: "Brown" },
+  { firstName: "Maria", lastName: "Smith", age: 62, hairColor: "Silver" },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="content">
+      <h1>Some cards:</h1>
+      <ProfileCard person={people[0]} />
+      <ProfileCard person={people[1]} />
+      <ProfileCard person={people[2]} />
+      <ProfileCard person={people[3]} />
     </div>
   );
 }
